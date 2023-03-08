@@ -4,22 +4,19 @@ A simple database for a bookstore in saudi arabia
 ## Database Description
 It has 6 entities *Customer*, *Book*, *Publisher*, *Author*, *Branch*, *Employee*
 
->### Customer
-> * A unique number for each customer 
-> * The customer name
-> * The customer mobile number
 
->### Book
-> * ISBN a number to identify each book
-> * The book name
-> * The book type: it's either a hardcover or paperback
-> * The book language 
-> * The book price in SAR
-> * Book Genre. It's a multivalued attribute, a book can have more than one genre 
-> * The number of pages
+## Database ER Digram:
+
+<img width="7456" alt="ER Diagram (Community) (1)" src="https://user-images.githubusercontent.com/110794992/223779503-2415e920-9bbc-4573-82b8-bec35b96f507.png">
 
 
 
+## Database Tables:
 
+<img width="1134" alt="Screen Shot 1444-08-15 at 12 12 57 AM" src="https://user-images.githubusercontent.com/110794992/223779616-15c2e852-05cf-49de-ba91-af234dfbec08.png">
+
+
+---
+This was programmed in MYSQL with VSCode IDE :)
 
 
