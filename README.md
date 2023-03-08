@@ -1,12 +1,13 @@
 # BookStore-DataBase
 A simple database for a bookstore in saudi arabia.
+<br/>
 --
 
 ## Database ER Digram:
 
 <img width="7456" alt="ER Diagram (Community) (1)" src="https://user-images.githubusercontent.com/110794992/223779503-2415e920-9bbc-4573-82b8-bec35b96f507.png">
 
-
+<br/>
 
 ## Database Tables:
 
@@ -14,7 +15,7 @@ A simple database for a bookstore in saudi arabia.
 
 ## What I used 
 This was programmed in MYSQL with VSCode IDE :) <br/>
-For designing the ER Diagram i used FIGMA and for the tables i used DRAWSQL <br/>
+For designing the ER Diagram i used *FIGMA* and for the tables i used *DRAWSQL* <br/>
 
 ---
 
