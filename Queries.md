@@ -1,9 +1,91 @@
+# Queries !
 ```SQL
-/*To get all the managers in the database by selecting who has the job title manager*/
+/*To get all the managers by selecting who has the job title manager*/
 SELECT * FROM EMPLOYEE
 WHERE Job_title = 'Manager';
+
 
 /*Or if the manager is equal to NULL*/
 SELECT * FROM EMPLOYEE
 WHERE Manager IS NULL;
+
+
+/*Show the employees who work in Jeddah*/
+SELECT * FROM EMPLOYEE
+WHERE city = 'Jeddah';
+
+
+/*Show the average salary in every branch*/
+SELECT Branch_Number, ROUND(AVG(Salary),0) AS 'Average salary'
+FROM EMPLOYEE
+GROUP BY Branch_Number;
+
+
+/*Select employees who were hired in the year 2022*/
+SELECT * FROM EMPLOYEE
+WHERE YEAR(Date_Hire) = '2022';
+
+
+/*Show the number of books each author has*/
+SELECT AUTHOR.NAME, COUNT(BOOK.ISBN) AS 'Number of books'
+FROM AUTHOR
+JOIN BOOK ON AUTHOR.ID = BOOK.AUTHOR
+GROUP BY AUTHOR;
+
+
+/*Show the number of books each publisher published*/
+SELECT PUBLISHER.NAME, COUNT(BOOK.ISBN) AS 'Number of books'
+FROM PUBLISHER
+JOIN BOOK ON PUBLISHER.ID = BOOK.PUBLISHER
+GROUP BY PUBLISHER;
+
+
+/*Show the total number of books in every branch*/
+SELECT BRANCH, SUM(QUANTITY) AS 'Total'
+FROM INVENTORY
+GROUP BY BRANCH;
+
+
+/*Show the total purchase of the purchase id: 41364109, customer name and mobile number*/
+SELECT CUSTOMER.NAME, CUSTOMER.MOBILE, SUM(PURCHASE.QUANTITY * BOOK.PRICE) AS 'Total Purchase'
+FROM PURCHASE
+JOIN CUSTOMER ON CUSTOMER.NUMBER = PURCHASE.CUSTOMER
+JOIN BOOK ON BOOK.ISBN = PURCHASE.BOOK
+WHERE ID = 41364109
+GROUP BY PURCHASE.ID, CUSTOMER.NAME, CUSTOMER.MOBILE;
+
+
+/*Show the total purchases of Talal Al-Sharif*/
+SELECT CUSTOMER.NAME, CUSTOMER.MOBILE, SUM(PURCHASE.QUANTITY * BOOK.PRICE) AS 'Total Purchase'
+FROM PURCHASE
+JOIN CUSTOMER ON CUSTOMER.NUMBER = PURCHASE.CUSTOMER
+JOIN BOOK ON BOOK.ISBN = PURCHASE.BOOK
+WHERE CUSTOMER.NAME = 'Talal Al-Sharif'
+GROUP BY CUSTOMER.NAME, CUSTOMER.MOBILE;
+
+
+/*Show the books that are less than 300 pages*/
+SELECT BOOK.NAME AS 'BOOK NAME', AUTHOR.NAME AS 'AUTHOR', BOOK.PAGES_NUM
+FROM BOOK
+JOIN AUTHOR ON AUTHOR.ID = BOOK.AUTHOR
+WHERE PAGES_NUM < 300;
+
+
+/*Show Romance books*/
+SELECT BOOK.NAME AS 'BOOK NAME', AUTHOR.NAME AS 'AUTHOR', BOOK_GENRE.GENRE
+FROM BOOK
+JOIN BOOK_GENRE ON BOOK_GENRE.BOOK = BOOK.ISBN
+JOIN AUTHOR ON AUTHOR.ID = BOOK.AUTHOR
+WHERE BOOK_GENRE.GENRE = 'Romance';
+
+
+
+/*Show the total purchases of the date 2022-01-04*/
+SELECT CUSTOMER.NAME, SUM(PURCHASE.QUANTITY * BOOK.PRICE) AS 'Total', PURCHASE.DATE_PURCHASE
+FROM PURCHASE
+JOIN BOOK ON BOOK.ISBN = PURCHASE.BOOK
+JOIN CUSTOMER ON CUSTOMER.NUMBER = PURCHASE.CUSTOMER
+WHERE DATE_PURCHASE = '2022-01-04'
+GROUP BY CUSTOMER.NAME;
+
 ```
