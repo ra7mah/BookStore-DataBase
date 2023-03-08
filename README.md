@@ -14,8 +14,8 @@ A simple database for a bookstore in saudi arabia.
 
 
 ---
-This was programmed in MYSQL with VSCode IDE :)
-I wrote additional Queries to find total purchases, managers and total number of books for ever publisher etc... 
-Take a look [Queries file](https://github.com/rahmaAlghalib/BookStore-DataBase/blob/main/Queries.md) 
+This was programmed in MYSQL with VSCode IDE :). 
+I wrote additional Queries to find total purchases, managers and total number of books for ever publisher etc...   
+Take a look [Queries file](https://github.com/rahmaAlghalib/BookStore-DataBase/blob/main/Queries.md)   
 
 
