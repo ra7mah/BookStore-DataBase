@@ -1,5 +1,5 @@
 # BookStore-DataBase
-A simple database for a bookstore in saudi arabia.
+A simple database for a bookstore.
 <br/>
 --
 
