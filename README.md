@@ -1,5 +1,5 @@
 # BookStore-DataBase
-A simple database for a bookstore.
+Database Design for a bookstore.
 <br/>
 --
 
