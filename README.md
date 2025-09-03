@@ -1,25 +1,44 @@
-# BookStore-DataBase
-Database Design for a bookstore.
-<br/>
---
+# BookStore Database
 
-## Database ER Digram:
-
-<img width="7456" alt="ER Diagram (Community) (1)" src="https://user-images.githubusercontent.com/110794992/223779503-2415e920-9bbc-4573-82b8-bec35b96f507.png">
-
-<br/>
-
-## Database Tables:
-
-<img width="1134" alt="Screen Shot 1444-08-15 at 12 12 57 AM" src="https://user-images.githubusercontent.com/110794992/223779616-15c2e852-05cf-49de-ba91-af234dfbec08.png">
-
-## What I used 
-This was programmed in MYSQL with VSCode IDE :) <br/>
-For designing the ER Diagram i used *FIGMA* and for the tables i used *DRAWSQL* <br/>
+A relational database system designed and implemented for managing a bookstore.  
+The project includes the **SQL schema**, **ER diagram**, and example queries for data analysis.
 
 ---
 
-I wrote additional Queries to find total purchases, managers and total number of books for ever publisher etc... <br/>
-Take a look [Queries file](https://github.com/rahmaAlghalib/BookStore-DataBase/blob/main/Queries.md)   
+## Project Overview
+This database supports bookstore operations such as:
+- Managing books, authors, and publishers
+- Tracking customers and their purchases
+- Handling employees, managers, and store branches
+- Running useful queries for insights (e.g., total purchases, number of books per publisher)
+
+---
+
+## Database Design
+
+### Entity-Relationship Diagram
+<img width="7456" alt="ER Diagram" src="https://user-images.githubusercontent.com/110794992/223779503-2415e920-9bbc-4573-82b8-bec35b96f507.png">
+
+### Database Tables
+<img width="1134" alt="Database Tables" src="https://user-images.githubusercontent.com/110794992/223779616-15c2e852-05cf-49de-ba91-af234dfbec08.png">
+
+---
+
+## Technologies Used
+- **Database:** MySQL  
+- **IDE:** VS Code  
+- **Design Tools:** Figma (ER Diagram), DrawSQL (Table Design)
+
+---
+
+## Queries
+Additional SQL queries are provided to:
+- Calculate total purchases per customer
+- List managers and employees
+- Count books per publisher
+- And more!  
+
+👉 Check them out here: [Queries.md](https://github.com/rahmaAlghalib/BookStore-DataBase/blob/main/Queries.md)
+
 
 
